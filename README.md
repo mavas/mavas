@@ -7,7 +7,7 @@
 --->
 # My "Software Engineer" resume
 
-I am currently in the job market, and am proactively looking for work.
+I'm currently in the job market, and am actively looking for work.
 
 Please check back often to see the updates made to these 2 repositories:
 - [https://github.com/mavas/hackerrank](https://github.com/mavas/hackerrank)
