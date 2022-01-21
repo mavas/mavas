@@ -10,9 +10,9 @@
 I'm currently in the job market, and am actively looking for work.
 
 Please check back often to see the updates made to these 2 repositories:
-- [https://github.com/mavas/hackerrank](github.com/mavas/hackerrank)
+- [github.com/mavas/hackerrank](https://github.com/mavas/hackerrank)
 
-- [https://github.com/mavas/tensorflow-work](github.com/mavas/tensorflow-work)
+- [github.com/mavas/tensorflow-work](https://github.com/mavas/tensorflow-work)
 <!---
 mavas/mavas is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
