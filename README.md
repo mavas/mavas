@@ -10,6 +10,8 @@
 - [This](https://github.com/mavas/hackerrank) repository has some recent **computer science problem solutions**.
 
 - [This](https://github.com/mavas/tensorflow-work) repository has **TensorFlow** work.
+
+- Google Cloud Professional Certified
 <!---
 mavas/mavas is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
