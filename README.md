@@ -10,9 +10,9 @@
 I'm currently in the job market, and am actively looking for work.
 
 Please check back often to see the updates made to these 2 repositories:
-- [HackerRank](https://github.com/mavas/hackerrank) has some recent and basic **computer science problem solutions** in Python 3.8.
+- [This](https://github.com/mavas/hackerrank) repository has some recent and basic **computer science problem solutions** in Python 3.8.
 
-- [tensorflow-work](https://github.com/mavas/tensorflow-work) has recent **TensorFlow** work.
+- [This](https://github.com/mavas/tensorflow-work) repository has recent **TensorFlow** work.
 <!---
 mavas/mavas is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
