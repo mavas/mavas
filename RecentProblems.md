@@ -2,7 +2,7 @@
 
 ## Failed laptop encrypted hard drive
 
-_Linux Unified Key Setup, and its source code_
+_Linux Unified Key Setup, reading its source code, learning its commands, and running 'dd'_
 
 I came home to find that my primary laptop's hard drive failed, and I had to just deal with it.  I head to learn and deal with the Luks Linux encryption file system thing, not only running commands (like 'luksOpen'), but dealing with the source code itself **of** those command line tools, just know exactly what was going on.  All of the laptop data was valuable, so I had to be careful, and so dealing with these commands, and  their source code, was important to proceed with.  I had to run the "dd if=/dev/sda of=/dev/sdb" command in attempts to at least perfectly mimorro/backup the data, so that you can isimply install Ubuntu back on it and the hard drive will be good as new, but I ran in to some errors with that command, and so now I'm stuck, and the laptop is just sitting here.  In the meantime itwasfastest though to simply use my older laptop for job hunting, and hten get a job, and then get back to the issue.  I h
 
