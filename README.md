@@ -7,10 +7,7 @@
 --->
 # My "Software Engineer" resume
 
-I'm currently in the job market, and am actively looking for work.
-
-Please check back often to see the updates made to these 2 repositories:
-- [This](https://github.com/mavas/hackerrank) repository has some recent and basic **computer science problem solutions** in Python 3.8.
+- [This](https://github.com/mavas/hackerrank) repository has some recent **computer science problem solutions** in Python 3.8.
 
 - [This](https://github.com/mavas/tensorflow-work) repository has recent **TensorFlow** work.
 <!---
