@@ -2,7 +2,7 @@
 
 ## Urgent shutdown of all GCP resources
 
-Perform network-intensive GCP storage operations, in order to completely shutdown a GCP project as quickly as possible, all motivated by keeping costs down to my credit card, ultimately completely disconnecting my credit card with the resources, b/c I got tired of paying for it.
+I had to perform network-intensive GCP storage operations, in order to completely shutdown a GCP project as quickly as possible, all motivated by keeping costs down to my credit card, ultimately completely disconnecting my credit card with the resources, b/c I got tired of paying for it.
 
 There's an issue regarding the **gsutil rsync ...** command, and filenames with either _special characters_ or _brackets_ in them.  This is a long operation and you don't want the command to fail, but it did and does.  I had to narrow down which directories, in about 4 terabytes of data, to find/locate the files/folders which had erroneous filenames in them, and had to write and execute a brand new custom Python script using the official google-cloud-storage PyPi package to perform the download, and surely that succeeded.  When you try to translate the command line command to a Python script, you want to make sure all the options you passed to the command are account for in the script.
 
@@ -10,11 +10,10 @@ There's an issue regarding the **gsutil rsync ...** command, and filenames with 
 The command I ran that got errors regarding the copy of certain files..
 > gsutil -m -u project-id rsync -P -c -r gs://directory1 ./mnt/directory1
 
-[the script I wrote](gcs_copy.py)
-
+- [the script I wrote](gcs_copy.py)
+- https://stackoverflow.com/questions/54660013/how-to-download-folder-containing-brackets-in-name
 - https://github.com/GoogleCloudPlatform/gsutil/issues/220
 - https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames
-- https://stackoverflow.com/questions/54660013/how-to-download-folder-containing-brackets-in-name .
 
 ## Failed laptop encrypted hard drive
 
