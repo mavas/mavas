@@ -17,9 +17,9 @@ mavas/mavas is a ✨ special ✨ repository because its `README.md` (this file) 
 You can click the Preview link to take a look at your changes.
 --->
 
-## Recent and miscellaneous technical issues solved
+## A sample of recent and miscellaneous technical issues solved
 
-Here's some technical problems I had to manually deal with recently, to solve *practical* problems that I didn't want to work on at the time but I had to because it happened by suprise and I was the only one who could fix it.
+Here's some technical problems I had to manually deal with recently, to solve practical problems that I didn't want to work on at the time but I had to because it happened by suprise and I was the only one who could fix it.
 
 - [Recent technical problems](RecentProblems.md)
 
