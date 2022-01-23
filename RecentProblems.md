@@ -8,7 +8,9 @@ There's an issue regarding the **gsutil rsync** command, and filenames with eith
 
 
 This is the command:
-> gsutil -m -u project-id rsync -P -c -r gs://directory1 ./mnt/directory1
+```
+gsutil -m -u project-id rsync -P -c -r gs://directory1 ./mnt/directory1
+```
 
 <!---- [the script I wrote](gcs_copy.py)--->
 - https://stackoverflow.com/questions/54660013/how-to-download-folder-containing-brackets-in-name
