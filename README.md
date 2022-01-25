@@ -11,7 +11,7 @@
 
 - [This](https://github.com/mavas/tensorflow-work) repository has **TensorFlow** work.
 
-- Google Cloud Professional Certified
+- Cloud Professional Certified
 
 - [Recent technical problems I'm working on](RecentProblems.md).
 <!---
