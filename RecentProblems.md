@@ -1,5 +1,18 @@
 # Recent technical problems being worked on
 
+
+## Telly Fabric
+
+- Emphasis on **testing**.  Lots of common folk people will need to use the
+  system.  Django's testing system.
+
+- **Strong language support**.  Lots of members of the public from different
+  backgrounds will need to use the system.  Django's support will be 100% used.
+
+- **Strong and custom search functionality**.  There is lots of text-based
+  information, and the information dealt with is particularly suited for high
+  quality searching.  Whoosh will be used.
+
 ## Urgent shutdown of all GCP resources
 
 I had to perform network-intensive [GCP storage](https://cloud.google.com/storage/) operations, in order to completely shutdown a GCP project as quickly as possible, all motivated by keeping costs down to my credit card, ultimately completely disconnecting my credit card from the resources, b/c I got tired of paying for it.

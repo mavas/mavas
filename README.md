@@ -14,6 +14,8 @@
 - Cloud Professional Certified
 
 - [Recent technical problems I'm working on](RecentProblems.md).
+
+- [Education](education.md).
 <!---
 mavas/mavas is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
