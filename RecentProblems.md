@@ -1,17 +1,13 @@
 # Recent technical problems being worked on
 
 
-## Telly Fabric
+## www.TellyFabric.com
 
-- Emphasis on **testing**.  Lots of common folk people will need to use the
-  system.  Django's testing system.
+- **Strong and custom search functionality**.  There is lots of text-based information, and the information dealt with is particularly suited for high quality searching.  Whoosh will be used.
 
-- **Strong language support**.  Lots of members of the public from different
-  backgrounds will need to use the system.  Django's support will be 100% used.
+- **Strong language support**.  Lots of members of the public from different backgrounds will need to use the system.  Django's support will be 100% used.
 
-- **Strong and custom search functionality**.  There is lots of text-based
-  information, and the information dealt with is particularly suited for high
-  quality searching.  Whoosh will be used.
+- Emphasis on **testing**.  Lots of common folk people will need to use the system.  Django's testing system.
 
 ## Urgent shutdown of all GCP resources
 
