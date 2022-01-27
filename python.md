@@ -8,6 +8,6 @@ Here's some writeup about my Python use.  It turns out to be wide/varied/broad, 
 
 - **[Web development]**.  I've dealt with Django a lot.  So this is a lot of web development server side things.
 
-- **[custom asynchronous networking]**.  I've dealt with Twisted.  Twisted is all about writing custom networking code, either on the server side or the client side.  You can make a video game or a game server with it, for example.
+- **[custom asynchronous networking]**.  I've dealt with Twisted.  Twisted is all about writing custom networking code, either on the server side or the client side.  You can make a video game or a game server with it, for example.  **scrapyd** and **scrapy** are written in Twisted.  You can containerize a Twisted app and launch it in the cloud easily.
 
 - **[search engines]**.  I've dealt with Whoosh, which is a search engine library.  So, search science.  It let's you create custom search engines for custom content.
