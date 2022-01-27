@@ -3,7 +3,7 @@
 
 ## www.TellyFabric.com
 
-- **Strong and custom search functionality**.  There is lots of text-based information, and the information dealt with is particularly suited for high quality searching.  Whoosh will be used.
+- **High quality search functionality**.  There is lots of text-based information, and the information dealt with is particularly suited for high quality searching.  Whoosh will be used.
 
 - **Strong language support**.  Lots of members of the public from different backgrounds will need to use the system.  Django's support will be 100% used.
 
