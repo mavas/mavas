@@ -1,6 +1,6 @@
 # Recent technical problems being worked on
 
-## www.TellyFabric.com
+## Telly Fabric
 
 - **High quality search functionality**.  There is lots of text-based information, and the information dealt with is particularly suited for high quality searching.  Whoosh will be used.
 
