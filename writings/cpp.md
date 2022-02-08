@@ -1,4 +1,4 @@
-# Things I've done with C++
+# Things I've done with C/C++
 
 - I first started out with C++, and much later learned Python.  Some say you get a different kind of engineer from the one that learns Python first and then has to learn C.  I understood the call stack, walked through things slowly with the **gdb** tool, made a game loop with it, etc.  The first compiler that I found that worked decent was Borland C++, which is still around today.  I used to lookup www.cplusplus.com **constantly**, and that web site is still up and looks the same.
 
@@ -14,4 +14,4 @@
 
 - All too often, you're on the web and you download some code and you have to compile it and deal with it, and this code is in C or C++, and you have to actually mess (edit the code and recompile) with it.  Often times is a small amount of code, like the kind that would interface with a toaster.  Take [Packet Storm Security](https://www.packetstormsecurity.com/).
 
-- Firmware is pretty important.  chipsec is a cool tool.  I heard lately that GoLang is popular with malware authors; I don't know the language yet.
+- Firmware is pretty important.  chipsec is a cool tool.  I heard lately that GoLang is popular with malware authors; I don't know the language yet.  ThinkPwn is a nasty exploit that deals with the UEFI stuff, that I've been reading about lately.
