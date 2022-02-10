@@ -25,10 +25,12 @@ I came home to find that my primary laptop's hard drive failed, and I had to jus
 
 ## Telly Fabric
 
-Telly Fabric is the name of a web site that lets users create/operate/conduct virtual criminal/civil court cases.  The project also features a *simulation* component, which uses a separate asynchronous service which periodically sends text messages and emails to users - at the appropriate time - so that it lets the sures really **feel**, in real time, the events portrayed in the court cases.  The intent is that it lets people create court cases and be lawyers or judges within those court cases without actually going to or dealing with a real/legal court.
+Telly Fabric is the name of a web site that lets users create/operate/conduct virtual criminal/civil court cases.  The project also features a *simulation* component, which uses a separate asynchronous service which periodically sends text messages and emails to users - at the appropriate time - so that it lets the users really **feel**, in real time, the events portrayed in the court cases.  The intent is that it lets people create court cases and be lawyers or judges within those court cases without actually going to or dealing with a real/legal court.
 
-- **High quality search functionality**.  There is lots of text-based information, and the information dealt with is particularly suited for high quality searching.  Whoosh will be used.
+- **High quality search functionality**.  This is very important, as the vast majority of the content is just text, and is always related to events in time, and you would want to search it.  [Whoosh](https://github.com/mchaput/whoosh) will be used.
 
-- **Strong language support**.  Lots of members of the public from different backgrounds will need to use the system.  Django's support will be 100% used.
+- **Opinion measurement**.  Crucial to the system, is that all **opinions** about a court case can be measured.  Practically every court case in America has and makes *decisions* that are very very **fuzzy**; that is, the judge talks back and forth with the lawyers, and then when that's all over, they make some marks on exactly a single sheet of paper which **records the results** of all that discussion, and that's it; all you have is a single sheet of paper.  Telly Fabric measures and deals which *all* of the in-between stuff.
 
-- Emphasis on **testing**.  Lots of common folk people will need to use the system.  Use only Django's testing system.
+- **Strong internationalization language support**.  Lots of members of the public from different backgrounds, and that speak different languages, will need to use the system.  Django's support will be 100% used.
+
+- Emphasis on **testing**.  There is lots of thoughts and opinions and facts and dependencies between them Lots of common folk people will need to use the system.  Use only Django's testing system.
