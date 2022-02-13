@@ -5,7 +5,7 @@
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 --->
-# My "Software Engineer" resume
+# My "Software Developer" resume
 
 - [This](https://github.com/mavas/hackerrank) repository has some recent **computer science problem solutions**.
 
