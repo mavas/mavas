@@ -11,7 +11,7 @@ This is the command:
 gsutil -m -u project-id rsync -P -c -r gs://directory1 ./mnt/directory1
 ```
 
-This of course isn't just ME - other people on the Internet have ran into the same issue, and it's still a pressing issue.  Here are some links about this problem:
+This of course isn't just ME - other people on the Internet have ran into the same issue, and it's still a pressing issue.  Here are some links about this problem.  The solution is to write a custom Python script to do the same thing as what the `gsutil` command does.
 
 <!-- [the script I wrote](gcs_copy.py) -->
 - https://stackoverflow.com/questions/54660013/how-to-download-folder-containing-brackets-in-name
