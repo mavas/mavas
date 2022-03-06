@@ -11,6 +11,8 @@ This is the command:
 gsutil -m -u project-id rsync -P -c -r gs://directory1 ./mnt/directory1
 ```
 
+This of course isn't just ME - other people on the Internet have ran into the same issue, and it's still a pressing issue.  Here are some links about this problem:
+
 <!-- [the script I wrote](gcs_copy.py) -->
 - https://stackoverflow.com/questions/54660013/how-to-download-folder-containing-brackets-in-name
 - https://github.com/GoogleCloudPlatform/gsutil/issues/220
@@ -24,7 +26,7 @@ I came home to find that my primary laptop's hard drive failed, and I had to jus
 
 ## The OpenCourt Project
 
-OpenCourt is a web site that lets users create/operate/conduct virtual criminal/civil court cases.  The project also features a *simulation* component, which uses a separate asynchronous service which periodically sends text messages and emails to users - at the appropriate time - so that it lets the users really **feel**, in real time, the events portrayed in the court cases.  The intent is that it lets people create court cases and be lawyers or judges within those court cases without actually going to or dealing with a real/legal court.
+OpenCourt is a web site that lets users create/operate/conduct virtual criminal/civil court cases.  It's essentially a case management system.  The project also features a *simulation* component, which uses a separate asynchronous service which periodically sends text messages and emails to users - at the appropriate time - so that it lets the users really **feel**, in real time, the events portrayed in the court cases.  The intent is that it lets people create court cases and be lawyers or judges within those court cases without actually going to or dealing with a real/legal court.
 
 - **High quality search functionality**.  This is very important, as the vast majority of the content is just text, and is always related to events in time, and you would want to search it.  [Whoosh](https://github.com/mchaput/whoosh) will be used.
 
@@ -33,3 +35,9 @@ OpenCourt is a web site that lets users create/operate/conduct virtual criminal/
 - **Strong internationalization language support**.  Lots of members of the public from different backgrounds, and that speak different languages, will need to use the system.  Django's support will be 100% used.
 
 - Emphasis on **testing**.  There is lots of thoughts and opinions and facts and dependencies between them Lots of common folk people will need to use the system.  Use only Django's testing system.
+
+## Reading the datalab source code
+
+I don't remember being required to dive into the code of Google Cloud's [Datalab](https://github.com/googledatalab/datalab), but I did anyway and was impressed by how it was built.  It really shows what someone could do if they have a **wide** variety of experience, because this project definitely took into account, and integrated, a number of various technologies, to produce a new and clean product: bash scripting, Docker, NodeJS, web development, and security.
+
+The project is somewhat obsolete now, with the new [JupyterLab](https://jupyter.org/) project being the next generation of Datalab, but it was still good to look at the code of it.  I learned about sophisitcated was of structuring `Dockerfile`s, where and when to use Bash scripting when you need it (you can't just do everything with Python, as much as you might want to), etc.
