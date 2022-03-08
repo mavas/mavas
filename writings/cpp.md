@@ -2,7 +2,7 @@
 
 - I first started out with C++, and much later learned Python.  Some say you get a different kind of engineer from the one that learns Python first and then has to learn C.  I understood the call stack, walked through things slowly with the **gdb** tool, made a game loop with it, etc.  The first compiler that I found that worked decent was Borland C++, which is still around today.  I used to lookup www.cplusplus.com **constantly**, and that web site is still up and looks the same.
 
-- Olimar's Escape.  My first text-based RPG game.  It features a game loop - of course - and is incomplete, but taught me that things can get big really quickly.
+- **Olimar's Escape** is a text text-based RPG game I made.  It features a game loop - of course - and is incomplete, but taught me that things can get big really quickly.  I had to start coming up with characters, and stories, and scenes, and speach, and items that need to go in the rooms, and all kinds of things.  It takes a lot to make a full video game.  The code is [here](https://github.com/mavas/Olimar-Escape).
 
 - I kind of got into the Boost libraries but didn't stay around for too long, it turns out.  I did Google's Summer of Code and used Boost.Python to make C++ bindings between C++ and Python.  There were numerous other options at the time but we settled on Boost.  The project ended up not using my work and using some other language binding tool.  OpenCog uses Boost extensively and successfully, and I have had to deal with that codebase before.
 
