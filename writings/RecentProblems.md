@@ -1,5 +1,13 @@
 # Recent technical problems being worked on
 
+## PythonAnywhere deployment
+
+Just recently learned about PythonAnywhere.com, that let's you host Django web sites for free; it's perfect, and mine is at https://DKfor2024.pythonanywhere.com
+
+There were lots of little things that were different, but managable.  For example, they encourage you to use `mkvirtualenv` instead my more familiar `python -m venv venv` or `virtualenv env` usage.  You can pretty much only use the `SQLite3` database driver Django backend, and everything must be under 500MB in size, including that database file, and the search indexe directories in use.  It uses a familiar mechanism to securely pass environment variables, and aggressive `memcached` use is effective.  3 different web sites are planned to be launched via that one URL.
+
+I had to take 3 seperate Django `project` folders, and factor out the unique Django `app` in them, into [seperate Python packages](https://docs.djangoproject.com/en/4.0/intro/reusable-apps/), such that you can `pip install` them.  Then, it was easier to not only work in those 3 project folders seperately, but to also build a 4th Django web site for PythonAnywhere.com that incorporates the core of the other sites.
+
 ## Urgent shutdown of all GCP resources
 
 I had to perform network-intensive [GCP storage](https://cloud.google.com/storage/) operations, in order to completely shutdown a GCP project as quickly as possible, all motivated by keeping costs down to my credit card, ultimately completely disconnecting my credit card from the resources, b/c I got tired of paying for it.
