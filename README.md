@@ -9,7 +9,7 @@
 
 - [This](https://github.com/mavas/hackerrank) repository has some recent **computer science problem solutions**.
 
-- [This](https://github.com/mavas/tensorflow-work) repository has **TensorFlow** work.
+- [This](https://github.com/mavas/tensorflow-work) repository has some **TensorFlow** examples.
 
 - Cloud Professional Certified
 
