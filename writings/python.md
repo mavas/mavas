@@ -11,3 +11,5 @@ Here's some writeup about my Python use.  It turns out to be wide/varied/broad, 
 - **[custom asynchronous networking]**.  I've dealt with Twisted.  Twisted is all about writing custom networking code, either on the server side or the client side.  You can make a video game or a game server with it, for example.  **scrapyd** and **scrapy** are written in Twisted.  You can containerize a Twisted app and launch it in the cloud easily.
 
 - **[search engines]**.  I've dealt with Whoosh, which is a search engine library.  So, search science.  It let's you create custom search engines for custom content.
+
+- I recently had to factor out a `Django application` from a `Django project` and it was all of these instructions at https://docs.djangoproject.com/en/4.0/intro/reusable-apps/#packaging-your-app.  This was necessary because the Django project was essentially the entire web site, and one of its applications represented everything unique about that site, but that uniqueness was needed for a different kind of deployment (www.PythonAnywhere.com deployment instead of Google Cloud's AppEngine).
