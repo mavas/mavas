@@ -1,0 +1,3 @@
+# Hasskell experience
+
+They said Haskell is beautiful for the programmer him/herself.  It's like typing in Dvorak instead of Qwerty.  In our "Programming Paradigms" class, Haskell was a part of it, and was my first experience.  I've read the www.LearnYouAHaskell.com book, and made a prototype 3D fighting game (similar to Super Smash Bros.) with it.  The game used GLFW-b, Yampa, OpenGL, networking, and a USB-connected GameCube controller, and all of those things actually worked together seamlessly, such that you could move the joystick and see polygons on the screen move accordingly.  I have the code for it somewhere but it's not handy for upload at the moment.
