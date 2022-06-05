@@ -8,7 +8,7 @@ To demonstrate some recent experience with embedded software development, I open
 
 Just recently learned about PythonAnywhere.com, that let's you host Django web sites for free; it's perfect, and has their own API at https://github.com/pythonanywhere/helper_scripts
 
-There were lots of little things that were different, but managable.  For example, they encourage you to use `mkvirtualenv` instead my more familiar `python -m venv venv` or `virtualenv env` usage.  You can pretty much only use the `SQLite3` database driver Django backend, and everything must be under 500MB in size, including that database file, and the search index directories in use.  It uses a familiar mechanism to securely pass environment variables, and aggressive `memcached` use is effective.  3 different web sites are planned to be launched via that one URL.
+There were lots of little things that were different, but managable.  For example, they encourage you to use `mkvirtualenv` instead the more familiar `python -m venv venv` or `virtualenv env` usage.  You can only use the `SQLite3` database driver Django backend, and everything must be under 500MB in size, including both that database file and the search index directories.  It uses a familiar mechanism to securely pass environment variables, and aggressive `memcached` use should be effective.
 
 I had to take 3 seperate Django `project` folders, and factor out the unique Django `app` in them, into [seperate Python packages](https://docs.djangoproject.com/en/4.0/intro/reusable-apps/), such that you can `pip install` them.  Then, it was easier to not only work in those 3 project folders seperately, but to also build a 4th Django web site for PythonAnywhere.com that incorporates the core of the other sites.
 
