@@ -6,7 +6,7 @@ To demonstrate some recent experience with embedded software development, I open
 
 ## PythonAnywhere deployment
 
-Just recently learned about PythonAnywhere.com, that let's you host Django web sites for free; it's perfect, and has their own API at https://github.com/pythonanywhere/helper_scripts
+Just recently learned about PythonAnywhere.com, that let's you host Django web sites for free; it's perfect, and has their own API at https://github.com/pythonanywhere/helper_scripts.
 
 There were lots of little things that were different, but managable.  For example, they encourage you to use `mkvirtualenv` instead the more familiar `python -m venv venv` or `virtualenv env` usage.  You can only use the `SQLite3` database driver Django backend, and everything must be under 500MB in size, including both that database file and the search index directories.  It uses a familiar mechanism to securely pass environment variables, and aggressive `memcached` use should be effective.
 
