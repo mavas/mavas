@@ -1,5 +1,11 @@
 # Recent technical problems being worked on
 
+## Docker compose production Tor and I2P services
+
+This `docker-compose.yml` file makes it easy to see how my production setups are built and deployed under the Tor and I2P networks, as services.
+
+The `eotk` project is officially recommended and listed directly under the https://torproject.org URL prefix, and is used by at least a few news organizations, **so you know it's good quality to know this package**.  An alternative is using a Docker ubuntu image and the standar `tor` package, along with `superisord`.
+
 ## Arduino kit
 
 To demonstrate some recent experience with embedded software development, I opened up an old Arduino kit that I got back in the day.  It has a Raspberry Pi 3 Model B and 16GB NOOBS, Arduino Shield model Ethernet without PoE, Arduino Uno, and various other hardware pieces you can use to build what appears to be a car that rolls on 4 wheels.
