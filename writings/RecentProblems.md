@@ -1,5 +1,10 @@
 # Recent technical problems being worked on
 
+- [Docker compose](DockerCompose.md)
+- [EOTK and Datalab containers](eotk_datalab.md)
+- [Arduino kit](arduino.md)
+- [Python Anywhere deployment](python_anywhere.md)
+
 ## Docker compose production Tor and I2P services
 
 This `docker-compose.yml` file makes it easy to see how my production setups are built and deployed under the Tor and I2P networks, as services.
