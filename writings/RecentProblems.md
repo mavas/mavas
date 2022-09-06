@@ -5,39 +5,11 @@
 - [Arduino kit](arduino.md)
 - [Python Anywhere deployment](python_anywhere.md)
 
-## Docker compose production Tor and I2P services
-
-This `docker-compose.yml` file makes it easy to see how my production setups are built and deployed under the Tor and I2P networks, as services.
-
-The `eotk` project is officially recommended and listed directly under the https://torproject.org URL prefix, and is used by at least a few news organizations, **so you know it's good quality to know this package**.  An alternative is using a Docker ubuntu image and the standar `tor` package, along with `superisord`.  There was a nifty github repo that had a nice and naive setup for a Tor Onion Service, and was perfect to fork and offers a new perspective on the Tor deployment that's different from `eotk`'s.  Both I think are sufficient though, and no other third option will be investigated.
-
-I2P is impressive and was easy to get up and running, much more so than the 2 Tor examples above.
-
 ### Docker files understanding
 
 I've had to manually understand and craft and modify many Dockerfiles seen in the wild lately for this project, and so this section lists them all.  Effort was made to use the same Ubuntu version everywhere.
 
 - github.com/alecmuffett/eotk/opt.d/build-ubuntu-20.04.sh
-
-## Arduino kit
-
-To demonstrate some recent experience with embedded software development, I opened up an old Arduino kit that I got back in the day.  It has a Raspberry Pi 3 Model B and 16GB NOOBS, Arduino Shield model Ethernet without PoE, Arduino Uno, and various other hardware pieces you can use to build what appears to be a car that rolls on 4 wheels.
-
-## PythonAnywhere deployment
-
-Just recently learned about PythonAnywhere.com, that let's you host Django web sites for free; it's perfect, and has their own API at https://github.com/pythonanywhere/helper_scripts.
-
-There were lots of little things that were different, but managable.  For example, they encourage you to use `mkvirtualenv` instead the more familiar `python -m venv venv` or `virtualenv env` usage.  You can only use the `SQLite3` database driver Django backend, and everything must be under 500MB in size, including both that database file and the search index directories.  It uses a familiar mechanism to securely pass environment variables, and aggressive `memcached` use should be effective.
-
-I had to take 3 seperate Django `project` folders, and factor out the unique Django `app` in them, into [seperate Python packages](https://docs.djangoproject.com/en/4.0/intro/reusable-apps/), such that you can `pip install` them.  Then, it was easier to not only work in those 3 project folders seperately, but to also build a 4th Django web site for PythonAnywhere.com that incorporates the core of the other sites.
-
-A good pipeline to develop is to make everything be entirely focused in the input and output of the http://XXX.pythonanywhere.com` web URL: two Whoosh search index directories need to be maintained, as well as an SQLite instance file, but so long as those 3 things are the sources and sinks of the pipeline, this can be a game changer.  You might integrate well with local docker container instances and images for development.
-
-- 2 production whoosh index directories
-- 1 SQLite production instance
-- 1 local PostgreSQL instance docker container
-- Heavily Django fixture oriented data (both whoosh indexes and all SQL
-  databases)
 
 ## Urgent shutdown of all GCP resources
 
