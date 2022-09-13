@@ -1,9 +1,9 @@
 # Recent technical problems being worked on
 
 - [Docker compose](DockerCompose.md)
-- [EOTK and Datalab containers](eotk_datalab.md)
-- [Arduino kit](arduino.md)
-- [Python Anywhere deployment](python_anywhere.md)
+- [EOTK and Datalab container review](eotk_datalab.md)
+- [A random Arduino kit to play with](arduino.md)
+- [Deployment on www.PythonAnywhere.com](python_anywhere.md)
 
 ### Docker files understanding
 
