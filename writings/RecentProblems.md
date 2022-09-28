@@ -1,5 +1,6 @@
 # Recent technical problems being worked on
 
+- [Boost MPI example, using only Docker](boost_mpi_example.md)
 - [Docker compose](DockerCompose.md)
 - [EOTK and Datalab container review](eotk_datalab.md)
 - [A random Arduino kit to play with](arduino.md)
