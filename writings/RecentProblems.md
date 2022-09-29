@@ -19,9 +19,3 @@ OpenCourt is a web site that lets users create/operate/conduct virtual criminal/
 - **Strong internationalization language support**.  Lots of members of the public from different backgrounds, and that speak different languages, will need to use the system.  Django's support will be 100% used.
 
 - Emphasis on **testing**.  There is lots of thoughts and opinions and facts and dependencies between them Lots of common folk people will need to use the system.  Use only Django's testing system.
-
-## Reading the datalab source code
-
-I don't remember being required to dive into the code of Google Cloud's [Datalab](https://github.com/googledatalab/datalab), but I did anyway and was impressed by how it was built.  It really shows what someone could do if they have a **wide** variety of experience, because this project definitely took into account, and integrated, a number of various technologies, to produce a new and clean product: bash scripting, Docker, NodeJS, web development, and security.
-
-The project is somewhat obsolete now, with the new [JupyterLab](https://jupyter.org/) project being the next generation of Datalab, but it was still good to look at the code of it.  I learned about sophisitcated was of structuring `Dockerfile`s, where and when to use Bash scripting when you need it (you can't just do everything with Python, as much as you might want to), etc.
