@@ -15,8 +15,6 @@
 
 - [Recent technical problems I'm working on](writings/RecentProblems.md).
 
-- [https://mavas.PythonAnywhere.com](https://mavas.PythonAnywhere.com) is my web site.
-
 <!--
 mtp
 coconut delivery
