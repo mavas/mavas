@@ -1,5 +1,7 @@
 # Recent technical problems being worked on
 
+Here are some recent technical problems or projects being worked on, that may or may not warrant a seperate repository for, but none-the-less should be described somewhere:
+
 - [Boost MPI example, using only Docker](boost_mpi_example.md)
 - [Docker compose](DockerCompose.md)
 - [EOTK and Datalab container review](eotk_datalab.md)
