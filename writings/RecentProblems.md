@@ -8,12 +8,6 @@
 - [Urgent shutdown of cloud resources](cloud_shutdown.md)
 - [Failed laptop encrypted hard drive](failed_hard_drive.md)
 
-### Docker files understanding
-
-I've had to manually understand and craft and modify many Dockerfiles seen in the wild lately for this project, and so this section lists them all.  Effort was made to use the same Ubuntu version everywhere.
-
-- github.com/alecmuffett/eotk/opt.d/build-ubuntu-20.04.sh
-
 ## The OpenCourt Project
 
 OpenCourt is a web site that lets users create/operate/conduct virtual criminal/civil court cases.  It's essentially a case management system.  The project also features a *simulation* component, which uses a separate asynchronous service which periodically sends text messages and emails to users - at the appropriate time - so that it lets the users really **feel**, in real time, the events portrayed in the court cases.  The intent is that it lets people create court cases and be lawyers or judges within those court cases without actually going to or dealing with a real/legal court.
