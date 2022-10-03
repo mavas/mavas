@@ -22,3 +22,9 @@ The project is somewhat obsolete now, with the new [JupyterLab](https://jupyter.
 - `OpenRESTy` for nginx.  Not at all interesting.
 - `ngx_http_substitutions_filter_module` ngnix filter.  Not at all interesting.
 - Lots of bash scripts (.sh), and some perl scripts
+
+## EOTK things learned
+
+The project is mostly about security and there's not much new or novel source code.  I'm mostly grateful that it took care of a lot of security-related thinking and concerns and even training, like regarding SSL certificates and HTTPS.
+
+It did imploy some things that I don't care too much about, like nginx, that regex module that it uses, or OpenResty.
