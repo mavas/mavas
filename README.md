@@ -15,7 +15,7 @@
 
 - [Recent technical problems I'm working on](writings/RecentProblems.md).
 
-- See my web site at https://mavas.PythonAnywhere.com
+- See my web site at https://mavas.PythonAnywhere.com/portfolio/
 
 <!--
 mtp
