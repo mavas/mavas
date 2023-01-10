@@ -10,3 +10,4 @@ Here are some recent technical problems or projects being worked on, that may or
 - [Urgent shutdown of cloud resources](cloud_shutdown.md)
 - [Failed laptop encrypted hard drive](failed_hard_drive.md)
 - [Open court system project](court_system.md)
+- [Android development](android.md)
