@@ -1,4 +1,4 @@
-# My understanding of computer networking
+# My experience with computer networking
 
 There are many, many different areas of expertise when in comes to computers, be it embedded systems, databases, graphics, operating systems, libraries, etc., but my focus and natural interest tended to focus on computer networking and network security.  Here's some ideas about my past with them.
 
