@@ -1,4 +1,16 @@
-# Recent technical problems being worked on
+# TechnicalReview.pdf
+
+## eotk deployment for www.example.com
+
+## AppEngine deployment with Django and local SQL database in container for www.example.com
+
+## Netflix implementation (client and server) with Twisted
+
+## Home corporate security measures
+
+## Compiling Tensorflow with no AVX support
+
+## Recent technical problems being worked on
 
 Here are some recent technical problems or projects being worked on, that may or may not warrant a seperate repository for, but none-the-less should be described somewhere:
 
