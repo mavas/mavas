@@ -9,13 +9,11 @@
 
 - [This](https://github.com/mavas/hackerrank) repository has some recent **computer science problem solutions**.
 
-- [This](https://github.com/mavas/tensorflow-certificate) repository has some **TensorFlow** examples.
+- Tensorflow Certified
 
 - Cloud Professional Certified
 
 - [Recent technical problems I'm working on](writings/RecentProblems.md).
-
-- See www.FalconPunchCheerios.com
 
 <!--
 mtp
