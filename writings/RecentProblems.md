@@ -2,6 +2,14 @@
 
 ## eotk deployment for www.example.com
 
+<!--
+## REST API development experience, and deployments
+
+One custom project involves `Django REST Framework` regarding an authentication server.  It's significant in that it's intent is to be totally _unified_, across many other different deployments; namely, www.example.com and a mobile phone application released publicly in the Apple App store.
+
+The 2 core functional components is exactly 2 third-party Django applications: `django-allauth` and `restframework'.  `allauth` performs practically all of the logical work, and `restframework` makes it all accessable with an API.
+-->
+
 ## AppEngine deployment with Django and local SQL database in container for www.example.com
 
 A good and easy production-grade deployment to an official `www.example.com` web domain is described here.  All you need is a cloud account, a Django project, and.. that's it.
