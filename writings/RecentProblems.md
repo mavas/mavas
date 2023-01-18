@@ -18,14 +18,13 @@ A good and easy production-grade deployment to an official `www.example.com` web
 
 You can implement something similar to Netflix or Disney+.  There's a server program, and many client programs that connect to it; none of the clients know about each other or even interact with each other, unlike a video game.  The server has all of the content, and the clients simply request content to be streamed to it, and the server handles it all.
 
-The fancy/complicated stuff happens in the server; the client is just a nice UI that steams content to the user who is viewing it.  Contrastingly, if you have lots of movies at home, and you wish to watch them, you'd have to use some local software like Windows Media Player, or the VLC media player, for playback.  That's not how Netflix works: the Netflix app that everyone uses simply streams content from remote servers.
+The fancy/complicated stuff happens in the server; the client is just a nice UI that streams content to the user who is viewing it.  Contrastingly, if you have lots of movies at home, and you wish to watch them, you'd have to use some local software like Windows Media Player, or the VLC media player, for playback.  That's not how Netflix works: the Netflix app that everyone uses simply streams content from remote servers.
 
 ## Compiling Tensorflow with no AVX support
 
-I once had to compile TensorFlow.  While I eventually found out that I didn't actually need to compile Tensorfloww (and instead just find a working Wheel file somewhere), this section documents my efforts at compiling that codebase (while I didn't realize that I didn't need to do that actually).
+I once had to compile TensorFlow.  While I eventually found out that I didn't actually need to compile it (you can instead hopefully find a working Wheel file somewhere), this section documents my efforts at compiling that codebase.
 
-The insructions at
-https://www.tensorflow.org/install didn’t work for me on any of my machines.  Everything appeared to have been installed correctly, but when I started up the Python interpreter and tried to do `import tensorflow as tf`, I got an error which mentioned the word `AVX` in it, and then the interpreter segfaulted.  Investigation revealed that it had something to do with the CPU architecture being used, combined with the Python wheel binary that was installed and being used.  It turns out that the `pip` installation mechanism isn't smart enough to decide not to install something while considering CPU architecture.  Part of solving the problem involved seeing this page: https://packages.gentoo.org/packages/sci-libs/tensorflow.  `avx` is a Gentoo `USE` flag that can be turned on and off, and so that's when I realized that I would need to somehow compile Tensorflow myself, without AVX support.
+The insructions at https://www.tensorflow.org/install didn’t work for me on any of my machines.  Everything appeared to have been installed correctly, but when I started up the Python interpreter and tried to do `import tensorflow as tf`, I got an error which mentioned the word `AVX` in it, and then the interpreter segfaulted.  Investigation revealed that it had something to do with the CPU architecture being used, combined with the Python wheel binary that was installed and being used.  It turns out that the `pip` installation mechanism isn't smart enough to decide not to install something while considering CPU architecture.  Part of solving the problem involved 1.) my already-present familiarity with the Gentoo operating system, and 2.) seeing this page: https://packages.gentoo.org/packages/sci-libs/tensorflow.  That page confirms that `avx`/`avx2` is a Gentoo `USE` flag that can be turned on and off; so TF needs to be compiled __without__ AVX support, and, for some reason, the Python wheel installed on my system requires AVX.
 
 Of course I’m sure we all can agree: don’t try looking at ANY content in the
 github.com/tensorflow/tensorflow directory. You only want to USE TensorFlow: you don’t want to
@@ -65,6 +64,8 @@ folder full of source code. It most always returns in less than a second. I ran 
 on the TensorFlow codebase, it took my machine at least 4 minutes. There’s over 2 million
 lines of code. For example, there’s these 2 files tfl_ops.cc and legalize_tf.cc that each have
 3700 and 2300 lines of code; it took 3+ hours to compile just those 2 files.
+
+- It turns out that there's a whole community of people that take the time and expertise to compile Tensorflow wheels and redistribute them, precisely b/c it's a common problem.  See [this](https://github.com/davidenunes/tensorflow-wheels) for example.
 
 <!--
 ## NodeJS experience
