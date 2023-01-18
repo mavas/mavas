@@ -9,9 +9,9 @@
 
 - [This](https://github.com/mavas/hackerrank) repository has some recent **computer science problem solutions**.
 
-- Tensorflow Certified
-
 - Cloud Professional Certified
+
+- Tensorflow Certified
 
 - [Recent technical problems I'm working on](writings/RecentProblems.md).
 
