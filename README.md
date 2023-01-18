@@ -15,7 +15,7 @@
 
 - [Recent technical problems I'm working on](writings/RecentProblems.md).
 
-- See my web site at www.FalconPunchCheerios.com
+- See www.FalconPunchCheerios.com
 
 <!--
 mtp
