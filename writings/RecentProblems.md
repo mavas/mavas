@@ -58,6 +58,17 @@ on the TensorFlow codebase, it took my machine at least 4 minutes. There’s ove
 lines of code. For example, there’s these 2 files tfl_ops.cc and legalize_tf.cc that each have
 3700 and 2300 lines of code; it took 3+ hours to compile just those 2 files.
 
+<!--
+## NodeJS experience
+
+Most of my experience using this software is with:
+ 
+- Modification and understanding the `DataLab` project source code, and
+- Deployment of a Mastodon instance
+
+Both of these projects make use of Docker and incorporate a running `Node` server as a core component of its operation.  My involvment regarding the DataLab project is its role in performance regarding data processing, and its involvement regarding Mastodon is its role in streaming social media and video content in an efficient manner to many client program processes.
+--->
+
 ## Recent technical problems being worked on
 
 Here are some recent technical problems or projects being worked on, that may or may not warrant a seperate repository for, but none-the-less should be described somewhere:
