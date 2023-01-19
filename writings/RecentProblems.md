@@ -6,8 +6,21 @@ When news about Mastodon came out, I of course didn't want to **use** it all, bu
 
 - https://github.com/anon5r/mastodon-documentation/blob/master/Contributing-to-Mastodon/Translating.md
 - https://github.com/anon5r/mastodon-documentation/blob/master/Running-Mastodon/Docker-Guide.md.  One of the funniest things is that other people's documentation is better than the official documentation, like this repository.  Anyway, thankfully Docker and translation are first-class support.
+- https://github.com/mavas/mastodon
 
-## eotk deployment for www.example.com
+## Web service deployment via Tor Onion Service
+
+I recently had to develop and deploy a web site for a business guy.  He basically wanted a web forum, but didn’t know or want to know how to set one up, and he didn't want to maintain it, and he said he’s heard about “Tor” before and said that he’s sure that he wanted to use that.  I of course already knew exactly what he was talking about, and did it all for him.
+
+It had to be deployed as a web site over the Tor network, and it needed to be up most of the time.  Docker compose was employed b/c of the multiple components involved: a PostgreSQL database, the web site itself, and a Tor service running constantly.  Django was used, along with https://github.com/ellmetha/django-machina; a fork was created to remove the dependency on Haystack, so that it instead just used Whoosh.  And those are all the components.
+
+- https://github.com/dustyfresh/OnionIRC
+
+## `eotk` deployment for www.example.com web site
+
+The section just above this one deals with the most-common scenario of "offering a computer service over the Tor network", but https://github.com/alecmuffett/eotk is used to create a sort of Tor proxy, which automatically creates the service from an already-existing web site.  `eotk` is used by Facebook, Washington Post, and various political groups to automatically offer their web site over the Tor network.
+
+I did this for my own web site.  The Onion address will be posted here later.
 
 <!--
 ## REST API development experience, and deployments
