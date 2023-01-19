@@ -18,6 +18,7 @@ It had to be deployed as a web site over the Tor network, and it needed to be up
 - https://community.torproject.org/onion-services/setup/
 - https://community.torproject.org/onion-services/advanced/https/
 
+A major consideration is that **you really want to be using the latest version of Tor**, and that means **you don't want to use the version that's packaged with Ubuntu**, and so Docker's [multi-stage builds](https://docs.docker.com/build/building/multi-stage/) are appropriate, where you use the first stage to build and compile the latest source code release of Tor into an executable, and then use that artifact in the next build stage.
 
 ## `eotk` deployment for www.example.com web site
 
