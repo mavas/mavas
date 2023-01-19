@@ -13,7 +13,7 @@
 
 - Tensorflow Certified
 
-- [Recent technical problems I'm working on](writings/RecentProblems.md).
+- [Recent technical problems I'm working on](writings/Portfolio.md).
 
 <!--
 mtp
