@@ -14,7 +14,10 @@ I recently had to develop and deploy a web site for a business guy.  He basicall
 
 It had to be deployed as a web site over the Tor network, and it needed to be up most of the time.  Docker compose was employed b/c of the multiple components involved: a PostgreSQL database, the web site itself, and a Tor service running constantly.  Django was used, along with https://github.com/ellmetha/django-machina; a fork was created to remove the dependency on Haystack, so that it instead just used Whoosh.  And those are all the components.
 
-- https://github.com/dustyfresh/OnionIRC
+- https://github.com/dustyfresh/OnionIRC.  This repository has the minimal setup, which involves only one container, with an Ubuntu base image, the `supervisord` service which will be responsible for 2 services, which are an IRC server (NIRCD) and Tor itself.  It even includes minimal config files for all 3.  Of course it needed to be modified to serve a web site instead of an IRC server.
+- https://community.torproject.org/onion-services/setup/
+- https://community.torproject.org/onion-services/advanced/https/
+
 
 ## `eotk` deployment for www.example.com web site
 
