@@ -1,4 +1,11 @@
-# TechnicalReview.pdf
+# Portfolio.pdf
+
+## Translating Mastodon, deploying an instance
+
+When news about Mastodon came out, I of course didn't want to **use** it all, but instead **launch my own instance**.  But why?  What would you call it?  And what's it's purpose?  I'm learning a knew language, and so maybe it should be about that.  Oh and you can also contribute official translations into the software.
+
+- https://github.com/anon5r/mastodon-documentation/blob/master/Contributing-to-Mastodon/Translating.md
+- https://github.com/anon5r/mastodon-documentation/blob/master/Running-Mastodon/Docker-Guide.md.  One of the funniest things is that other people's documentation is better than the official documentation, like this repository.  Anyway, thankfully Docker and translation are first-class support.
 
 ## eotk deployment for www.example.com
 
