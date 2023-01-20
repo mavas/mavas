@@ -8,15 +8,31 @@ All data problems revolve around your particular collection of data, and at the 
 
 _Linux Unified Key Setup, learning its commands, reading its source code, and running `dd`._
 
-I came home to find that my primary laptop's hard drive failed, and I had to just deal with it.  I had to learn and deal with the LUKS Linux encryption file system thing, not only having to discover/learn/run new commands (like `cryptsetup`, and `luksOpen`), but dealing with the source code itself **of** those command line tools.  All of the data was valuable, so I had to be careful, and so I had to know exactly what was going on, so dealing with these commands, and  their source code, was important to proceed with; thankfully the code was rather short.  I had to run the `dd if=/dev/sda of=/dev/sdb` command in attempts to at least perfectly mirror/backup the data, so that you can simply install Ubuntu back on it and the hard drive will be good as new, but I ran in to some errors with that command, and so now I'm stuck, and the laptop is just sitting here.  In the meantime it was fastest though to just use my older laptop for job hunting, and then get a job, and then get back to the issue.  Anyway, I usually use Ubuntu, and sometimes its using some transperant encryption thing underneath as the file system, and the point is is that it really is a transperant thing, meaning you're not supposed to really need to think about it.  But with this issue, it suddenly became **the** issue and one then has to dig under the hood and discover and learn about and deal with yet another new layer of software *stuff*.
+I came home to find that my primary laptop's hard drive failed, and I had to just deal with it.  I had to learn and deal with the LUKS Linux encryption file system thing, not only having to discover/learn/run new commands (like `cryptsetup`, and `luksOpen`), but dealing with the source code itself **of** those command line tools.  All of the data was valuable, so I had to be careful, and so I had to know exactly what was going on, so dealing with these commands, and  their source code, was important to proceed with; thankfully the code was rather short.  I had to run the `dd if=/dev/sda of=/dev/sdb` command in attempts to at least perfectly mirror/backup the data, so that you can simply install Ubuntu back on it and the hard drive will be good as new, but I ran in to some errors with that command, and so now I'm stuck, and the laptop is just sitting here.  In the meantime it was fastest though to just use my older laptop for job hunting, and then get a job, and then get back to the issue.
+
+Anyway, I usually use Ubuntu, and sometimes its using some transperant encryption thing underneath as the file system, and the point is that it really is a transperant thing, meaning you're not supposed to really need to think about it.  But with this issue, it suddenly became **the** issue and one then has to dig under the hood and discover and learn about and deal with yet another new layer of software *stuff*.
+
+## Production deployment: a Mastodon instance
+
+When news about Mastodon came out, I of course didn't want to **use** it all, but instead **launch my own instance**.
+
+But why?  What would you call it?  And what's it's purpose?  Well, I'm learning a knew spoken language, and so maybe it should be about that language.  That language community doesn't particularly at all have a presence in the Mastodon network, and so it looked like a great opportunity to be at the forefront of something, and create a new instance and likely obtain a large number of users reliably.
+
+And it's here!  Download your favorite Mastodon client and visit `mastodon.jbo` to see the latest of my work.
+
+The setup is all quite simple, thanks to Docker.  There's a `docker-compose.yml` file in the top directory, and there is of course upstream-provided instructions for deploying, administering, and maintaining an instance, and I of course read all of it.
+
+- https://github.com/anon5r/mastodon-documentation/blob/master/Running-Mastodon/Docker-Guide.md.  One of the funniest things is that other people's documentation is better than the official documentation, like this repository.  Anyway, thankfully Docker and translation are first-class support.
 
 ## Translating Mastodon, deploying an instance
 
-When news about Mastodon came out, I of course didn't want to **use** it all, but instead **launch my own instance**.  But why?  What would you call it?  And what's it's purpose?  I'm learning a knew language, and so maybe it should be about that.  Oh and you can also contribute official translations into the software.
+The section just above this one speaks about setting up a production server, but I can of course contribute some code changes to the upstream server itself.  Namely, in the form of language translations.
+
+Most huge open source projects have translations involved, such that folks can contribute language translations for their favorite language.  There weren't any translations for the purpose of my particular Mastodon instance, and so this was a great opportunity (for me) too.
+
+See my fork of the official Mastodon repository for my translations so far: https://github.com/mavas/mastodon.
 
 - https://github.com/anon5r/mastodon-documentation/blob/master/Contributing-to-Mastodon/Translating.md
-- https://github.com/anon5r/mastodon-documentation/blob/master/Running-Mastodon/Docker-Guide.md.  One of the funniest things is that other people's documentation is better than the official documentation, like this repository.  Anyway, thankfully Docker and translation are first-class support.
-- https://github.com/mavas/mastodon
 
 ## Production deployment: Web site as a Tor Onion Service
 
