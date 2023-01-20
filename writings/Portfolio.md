@@ -1,8 +1,14 @@
 # Portfolio.pdf (as of January 2023)
 
-## Tensorflow data pipelines, curation
+## Tensorflow work, data engineering, data curation
 
 All data problems revolve around your particular collection of data, and at the forefront of that is a proprietary web application I developed for the curation of video data regarding the video game called "Super Smash Bros. Melee".  At the core is Django, which is essentially 2 things: an entirely web-based interface to whatever you're doing, and heavy use of an associated PostgreSQL database.  This all then interfaces with a variety of Python libraries: models, datasets, cloud, youtube-dl, django-extensions, whoosh.
+
+## Failed laptop encrypted hard drive
+
+_Linux Unified Key Setup, reading its source code, learning its commands, and running 'dd'_
+
+I came home to find that my primary laptop's hard drive failed, and I had to just deal with it.  I had to learn and deal with the LUKS Linux encryption file system thing, not only having to discover/learn/run new commands (like `cryptsetup`, and `luksOpen`), but dealing with the source code itself **of** those command line tools.  All of the data was valuable, so I had to be careful, and so I had to know exactly what was going on, so dealing with these commands, and  their source code, was important to proceed with; thankfully the code was rather short.  I had to run the `dd if=/dev/sda of=/dev/sdb` command in attempts to at least perfectly mirror/backup the data, so that you can simply install Ubuntu back on it and the hard drive will be good as new, but I ran in to some errors with that command, and so now I'm stuck, and the laptop is just sitting here.  In the meantime it was fastest though to just use my older laptop for job hunting, and then get a job, and then get back to the issue.  Anyway, I usually use Ubuntu, and sometimes its using some transperant encryption thing underneath as the file system, and the point is is that it really is a transperant thing, meaning you're not supposed to really need to think about it.  But with this issue, it suddenly became **the** issue and one then has to dig under the hood and discover and learn about and deal with yet another new layer of software *stuff*.
 
 ## Translating Mastodon, deploying an instance
 
@@ -116,6 +122,5 @@ Here are some recent technical problems or projects being worked on, that may or
 - [A random Arduino kit to play with](arduino.md)
 - [Deployment on www.PythonAnywhere.com](python_anywhere.md)
 - [Urgent shutdown of cloud resources](cloud_shutdown.md)
-- [Failed laptop encrypted hard drive](failed_hard_drive.md)
 - [Open court system project](court_system.md)
 - [Android development](android.md)
