@@ -12,7 +12,7 @@ When news about Mastodon came out, I of course didn't want to **use** it all, bu
 - https://github.com/anon5r/mastodon-documentation/blob/master/Running-Mastodon/Docker-Guide.md.  One of the funniest things is that other people's documentation is better than the official documentation, like this repository.  Anyway, thankfully Docker and translation are first-class support.
 - https://github.com/mavas/mastodon
 
-## Web service deployment via Tor Onion Service
+## Production deployment: Web site as a Tor Onion Service
 
 I recently had to develop and deploy a web site for a business guy.  He basically wanted a web forum, but didn’t know or want to know how to set one up, and he didn't want to maintain it, and he said he’s heard about “Tor” before and said that he’s sure that he wanted to use that.  I of course already knew exactly what he was talking about, and did it all for him.
 
@@ -24,7 +24,7 @@ It had to be deployed as a web site over the Tor network, and it needed to be up
 
 A major consideration is that **you really want to be using the latest version of Tor**, and that means **you don't want to use the version that's packaged with Ubuntu**, and so Docker's [multi-stage builds](https://docs.docker.com/build/building/multi-stage/) are appropriate, where you use the first stage to build and compile the latest source code release of Tor into an executable, and then use that artifact in the next build stage.
 
-## `eotk` deployment for www.example.com web site
+## Production deployment: `eotk` Tor proxy for www.example.com web site
 
 The section just above this one deals with the most-common scenario of "offering a computer service over the Tor network", but https://github.com/alecmuffett/eotk is used to create a sort of Tor proxy, which automatically creates the service from an already-existing web site.  `eotk` is used by Facebook, Washington Post, and various political groups to automatically offer their web site over the Tor network.
 
@@ -38,17 +38,17 @@ One custom project involves `Django REST Framework` regarding an authentication 
 The 2 core functional components is exactly 2 third-party Django applications: `django-allauth` and `restframework'.  `allauth` performs practically all of the logical work, and `restframework` makes it all accessable with an API.
 -->
 
-## AppEngine deployment with Django and local SQL database in container for www.example.com
+## Production deployment: AppEngine, Django, domain registration, and local container SQL database (for www.example.com)
 
 A good and easy production-grade deployment to an official `www.example.com` web domain is described here.  All you need is a cloud account, a Django project, and.. that's it.
 
-## Netflix implementation (client and server) with Twisted
+## Production deployment and implementation: Netflix clone (client and server) via Twisted
 
 You can implement something similar to Netflix or Disney+.  There's a server program, and many client programs that connect to it; none of the clients know about each other or even interact with each other, unlike a video game.  The server has all of the content, and the clients simply request content to be streamed to it, and the server handles it all.
 
 The fancy/complicated stuff happens in the server; the client is just a nice UI that streams content to the user who is viewing it.  Contrastingly, if you have lots of movies at home, and you wish to watch them, you'd have to use some local software like Windows Media Player, or the VLC media player, for playback.  That's not how Netflix works: the Netflix app that everyone uses simply streams content from remote servers.
 
-## Compiling Tensorflow with no AVX support
+## Compiling Tensorflow, with no AVX support
 
 I once had to compile TensorFlow.  While I eventually found out that I didn't actually need to compile it (you can instead hopefully find a working Wheel file somewhere), this section documents my efforts at compiling that codebase.
 
