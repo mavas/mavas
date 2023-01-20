@@ -24,7 +24,7 @@ The setup is all quite simple, thanks to Docker.  There's a `docker-compose.yml`
 
 - https://github.com/anon5r/mastodon-documentation/blob/master/Running-Mastodon/Docker-Guide.md.  One of the funniest things is that other people's documentation is better than the official documentation, like this repository.  Anyway, thankfully Docker and translation are first-class support.
 
-## Translating Mastodon, deploying an instance
+## Contributing spoken language translations for upstream Mastodon
 
 The section just above this one speaks about setting up a production server, but I can of course contribute some code changes to the upstream server itself.  Namely, in the form of language translations.
 
