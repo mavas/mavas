@@ -4,7 +4,7 @@
 
 All data problems revolve around your particular collection of data, and at the forefront of that is a proprietary web application I developed for the curation of video data regarding the video game called "Super Smash Bros. Melee".  At the core is Django, which is essentially 2 things: an entirely web-based interface to whatever you're doing, and heavy use of an associated PostgreSQL database.  This all then interfaces with a variety of Python libraries: models, datasets, cloud, youtube-dl, django-extensions, whoosh.
 
-## Failed laptop encrypted hard drive
+## Task: Failed laptop encrypted hard drive
 
 _Linux Unified Key Setup, learning its commands, reading its source code, and running `dd`._
 
@@ -64,35 +64,31 @@ The 2 core functional components is exactly 2 third-party Django applications: `
 
 A good and easy production-grade deployment to an official `www.example.com` web domain is described here.  All you need is a cloud account, a Django project, and.. that's it.
 
+You want to make frequent releases to production.  There is a Django project, in a single folder that was created with `django-admin startproject example`, and this folder is a Git repository started with `git init .`, and releases are `git tag`ed on it.  Each time you make a release in this folder, you do `gcloud app deploy`, and after that command finishes running (it takes at most 2 minutes), the new site is deployed to your www.example.com domain.
+
+This is by far the easiest deployment I've ever done, but it's very effective.
+
+However, to save costs, it's possible to use your own SQL database that is running locally on your computer in a Docker container.. instead of using a costly Cloud SQL instance.  You your Django `settings.py` file, you can plug in your IP address, and make sure to login to your modem/router and open up the ports to allow access, and it works perfectly.  You have to take extra security measures, but so long as that is in place, you save money doing it this way (Cloud SQL is suprisingly expensive actually, running a few hundred dollars per month).
+
 ## Production deployment and implementation: Netflix clone (client and server) via Twisted
 
-You can implement something similar to Netflix or Disney+.  There's a server program, and many client programs that connect to it; none of the clients know about each other or even interact with each other, unlike a video game.  The server has all of the content, and the clients simply request content to be streamed to it, and the server handles it all.
+> You can implement something similar to Netflix or Disney+.
+
+There's a server program, and many client programs that connect to it; none of the clients know about each other or even interact with each other, unlike a video game.  The server has all of the content, and the clients simply request content to be streamed to it, and the server handles it all.
 
 The fancy/complicated stuff happens in the server; the client is just a nice UI that streams content to the user who is viewing it.  Contrastingly, if you have lots of movies at home, and you wish to watch them, you'd have to use some local software like Windows Media Player, or the VLC media player, for playback.  That's not how Netflix works: the Netflix app that everyone uses simply streams content from remote servers.
 
-## Compiling Tensorflow, with no AVX support
+## Task: Compiling Tensorflow, with no AVX support
 
 I once had to compile TensorFlow.  While I eventually found out that I didn't actually need to compile it (you can instead hopefully find a working Wheel file somewhere), this section documents my efforts at compiling that codebase.
 
 The insructions at https://www.tensorflow.org/install didn’t work for me on any of my machines.  Everything appeared to have been installed correctly, but when I started up the Python interpreter and tried to do `import tensorflow as tf`, I got an error which mentioned the word `AVX` in it, and then the interpreter segfaulted.  Investigation revealed that it had something to do with the CPU architecture being used, combined with the Python wheel binary that was installed and being used.  It turns out that the `pip` installation mechanism isn't smart enough to decide not to install something while considering CPU architecture.  Part of solving the problem involved 1.) my already-present familiarity with the Gentoo operating system, and 2.) seeing this page: https://packages.gentoo.org/packages/sci-libs/tensorflow.  That page confirms that `avx`/`avx2` is a Gentoo `USE` flag that can be turned on and off; so TF needs to be compiled __without__ AVX support, and, for some reason, the Python wheel installed on my system requires AVX.
 
-Of course I’m sure we all can agree: don’t try looking at ANY content in the
-github.com/tensorflow/tensorflow directory. You only want to USE TensorFlow: you don’t want to
-understand it, or deal with it. So only do the work required to generate the wheel file that you
-need.
+Of course I’m sure we all can agree: don’t try looking at ANY content in the github.com/tensorflow/tensorflow directory. You only want to USE TensorFlow: you don’t want to understand it, or deal with it. So only do the work required to generate the wheel file that you need.
 
-So your goal is to get that Python Wheel file. I’ve found sources of them online thankfully, but I
-still have a space computer compiling TensorFlow just to see if I can get the best bin ary I can (the
-ones online use prior versions of TF).
+So your goal is to get that Python Wheel file. I’ve found sources of them online thankfully, but I still have a space computer compiling TensorFlow just to see if I can get the best bin ary I can (the ones online use prior versions of TF).
 
-It takes like a full 24 hours to compile TensorFlow. Sometimes the computer would freeze after 12
-hours and you have to start it again, making sure that that doesn’t happen again the next time. I
-figured out the specific flags needed, and found 3 possible places to place them: ./configure
-inputs, the bazel command line, and a .tf_bazelrc resource file. One thing that puts your mind at
-ease is that the time it takes to compile TensorFlow is nothing compared to the training time you’ll
-be doing anyway (lol). In other words, how long it takes to compile TensorFlow pales in
-comparison to how long it will take for TensorFlow to train on your data anyway, after you’re done
-compiling TensorFlow.
+It takes like a full 24 hours to compile TensorFlow. Sometimes the computer would freeze after 12 hours and you have to start it again, making sure that that doesn’t happen again the next time. I figured out the specific flags needed, and found 3 possible places to place them: `./configure` inputs, the `bazel` command line, and a `.tf_bazelrc` resource file. One thing that puts your mind at ease is that the time it takes to compile TensorFlow is nothing compared to the training time you’ll be doing anyway (lol). In other words, how long it takes to compile TensorFlow pales in comparison to how long it will take for TensorFlow to train on your data anyway, after you’re done compiling TensorFlow.
 
 - I got to understand the TensorFlow developer Docker image. Pretty nifty, and I can easily
 see how it can be industrialized in a cloud environment to of course build almost any
