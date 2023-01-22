@@ -1,5 +1,11 @@
 # Portfolio.pdf (as of January 2023)
 
+## Production deployment: MeleeSearch REST API endpoint (over Tor network)
+
+So the results of my research into Super Smash Bros. Melee video game footage yielded a few model files which can be used to automatically analyize data, and you can expose that data through an application programming interface (API) accessible over the network using the REST protocol.
+
+Django Rest Framework is used, deployed as a running Docker container, and it's accessible over the Tor network as a Tor Onion Service.
+
 ## Tensorflow work, data engineering, data curation
 
 All data problems revolve around your particular collection of data, and at the forefront of that is a proprietary web application I developed for the curation of video data regarding the video game called "Super Smash Bros. Melee".  At the core is Django, which is essentially 2 things: an entirely web-based interface to whatever you're doing, and heavy use of an associated PostgreSQL database.  This all then interfaces with a variety of Python libraries: models, datasets, cloud, youtube-dl, django-extensions, whoosh.
