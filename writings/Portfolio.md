@@ -1,5 +1,11 @@
 # Portfolio.pdf (as of January 2023)
 
+## Introduction
+
+This document is entirely made for employment purposes.
+
+Each section, except for this one, describes a technical problem that was worked on.
+
 ## Production deployment: MeleeSearch REST API endpoint (over Tor network)
 
 So the results of my research into Super Smash Bros. Melee video game footage yielded a few model files which can be used to automatically analyize data, and you can expose that data through an application programming interface (API) accessible over the network using the REST protocol.
