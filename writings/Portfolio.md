@@ -4,7 +4,7 @@
 
 This document is entirely made for employment purposes.
 
-Each section, except for this one, describes a technical problem that was worked on.
+Each section (except for this one) describes a technical problem that was worked on [in no particular order].
 
 ## Production deployment: MeleeSearch REST API endpoint (over Tor network)
 
