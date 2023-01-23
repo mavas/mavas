@@ -96,10 +96,10 @@ So your goal is to get that Python Wheel file. I’ve found sources of them onli
 
 It takes like a full 24 hours to compile TensorFlow. Sometimes the computer would freeze after 12 hours and you have to start it again, making sure that that doesn’t happen again the next time. I figured out the specific flags needed, and found 3 possible places to place them: `./configure` inputs, the `bazel` command line, and a `.tf_bazelrc` resource file. One thing that puts your mind at ease is that the time it takes to compile TensorFlow is nothing compared to the training time you’ll be doing anyway (lol). In other words, how long it takes to compile TensorFlow pales in comparison to how long it will take for TensorFlow to train on your data anyway, after you’re done compiling TensorFlow.
 
-- I got to understand the TensorFlow developer Docker image. Pretty nifty, and I can easily
+- I got to understand [the TensorFlow developer Docker image](https://www.tensorflow.org/install/source#docker_linux_builds). Pretty nifty, and I can easily
 see how it can be industrialized in a cloud environment to of course build almost any
 combination of Python version and TensorFlow version, with or without AVX (or whatever
-compile-time option concerns you at the time). Too much work though – just get the wheel
+compile-time option concerns you at the time). Too much work though and not necessary, ever since I learned/remembered that you just need a pre-compiled and compatible Python wheel file somewhere, and plenty of them are on GitHub from contributors working on the same thing I was tasked with – just get the wheel
 and get out.
 
 - I eventually remembered that you can find already-compiled wheels on GitHub, and I did
@@ -114,10 +114,10 @@ Metal Gear Solid.
 - Sloccount is a computer program that simply counts how many lines of code there are in a
 folder full of source code. It most always returns in less than a second. I ran that program
 on the TensorFlow codebase, it took my machine at least 4 minutes. There’s over 2 million
-lines of code. For example, there’s these 2 files tfl_ops.cc and legalize_tf.cc that each have
-3700 and 2300 lines of code; it took 3+ hours to compile just those 2 files.
+lines of code. For example, there’s these 2 files [tfl_ops.cc](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/compiler/mlir/lite/ir/tfl_ops.cc) and [legalize_tf.cc](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/compiler/mlir/tosa/transforms/legalize_tf.cc) that each have
+4,000 and 2300 lines of code; it took 3+ hours to compile just those 2 files.
 
-- It turns out that there's a whole community of people that take the time and expertise to compile Tensorflow wheels and redistribute them, precisely b/c it's a common problem.  See [this](https://github.com/davidenunes/tensorflow-wheels) for example.
+- It turns out that there's a whole community of people that take the time and expertise to compile Tensorflow wheels and redistribute them, precisely b/c it's a common problem.  See [this](https://github.com/davidenunes/tensorflow-wheels) and [this](https://www.eggwall.com/2020/09/compiling-tensorflow-without-avx.html) for example.
 
 <!--
 ## NodeJS experience
