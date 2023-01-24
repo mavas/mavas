@@ -4,7 +4,7 @@
 
 This document is entirely made for employment purposes.
 
-Each section (except for this one) describes a technical problem that was worked on [in no particular order].
+Each section (except for this one) describes a technical problem that was worked on; in no particular order.
 
 ## Production deployment: MeleeSearch REST API endpoint (over Tor network)
 
@@ -96,17 +96,13 @@ I once had to compile TensorFlow.  While I eventually found out that I didn't ac
 
 The insructions at https://www.tensorflow.org/install didn’t work for me on any of my machines.  Everything appeared to have been installed correctly, but when I started up the Python interpreter and tried to do `import tensorflow as tf`, I got an error which mentioned the word `AVX` in it, and then the interpreter segfaulted.  Investigation revealed that it had something to do with the CPU architecture being used, combined with the Python wheel binary that was installed and being used.  It turns out that the `pip` installation mechanism isn't smart enough to decide not to install something while considering CPU architecture.  Part of solving the problem involved 1.) my already-present familiarity with the Gentoo operating system, and 2.) seeing this page: https://packages.gentoo.org/packages/sci-libs/tensorflow.  That page confirms that `avx`/`avx2` is a Gentoo `USE` flag that can be turned on and off; so TF needs to be compiled __without__ AVX support, and, for some reason, the Python wheel installed on my system requires AVX.
 
-Of course I’m sure we all can agree: don’t try looking at ANY content in the github.com/tensorflow/tensorflow directory. You only want to USE TensorFlow: you don’t want to understand it, or deal with it. So only do the work required to generate the wheel file that you need.
+Of course I’m sure we all can agree: don’t try looking at ANY content in the [github.com/tensorflow/tensorflow](https://github.com/tensorflow/tensorflow/tree/master/tensorflow) directory. You only want to _USE_ TensorFlow: you don’t want to _understand_ it, or _deal_ with it (installation issues, etc.). So only do the work required to generate the wheel file that you need.
 
-So your goal is to get that Python Wheel file. I’ve found sources of them online thankfully, but I still have a space computer compiling TensorFlow just to see if I can get the best bin ary I can (the ones online use prior versions of TF).
+So your goal is to get that Python Wheel file. I’ve found sources of them online thankfully, but I still have a spare computer compiling TensorFlow just to see if I can get the best binary I can (the ones online use outdated versions of TF).
 
 It takes like a full 24 hours to compile TensorFlow. Sometimes the computer would freeze after 12 hours and you have to start it again, making sure that that doesn’t happen again the next time. I figured out the specific flags needed, and found 3 possible places to place them: `./configure` inputs, the `bazel` command line, and a `.tf_bazelrc` resource file. One thing that puts your mind at ease is that the time it takes to compile TensorFlow is nothing compared to the training time you’ll be doing anyway (lol). In other words, how long it takes to compile TensorFlow pales in comparison to how long it will take for TensorFlow to train on your data anyway, after you’re done compiling TensorFlow.
 
-- I got to understand [the TensorFlow developer Docker image](https://www.tensorflow.org/install/source#docker_linux_builds). Pretty nifty, and I can easily
-see how it can be industrialized in a cloud environment to of course build almost any
-combination of Python version and TensorFlow version, with or without AVX (or whatever
-compile-time option concerns you at the time). Too much work though and not necessary, ever since I learned/remembered that you just need a pre-compiled and compatible Python wheel file somewhere, and plenty of them are on GitHub from contributors working on the same thing I was tasked with – just get the wheel
-and get out.
+- I got to understand [the TensorFlow developer Docker image](https://www.tensorflow.org/install/source#docker_linux_builds). Pretty nifty, and I can easily see how it can be industrialized in a cloud environment to of course build almost any combination of Python version and TensorFlow version, with or without AVX (or whatever compile-time option concerns you at the time). Too much work though and not necessary, ever since I learned/remembered that you just need a pre-compiled and compatible Python wheel file somewhere, and plenty of them are on GitHub from contributors working on the same thing I was tasked with – just get the wheel and get out.
 
 - I eventually remembered that you can find already-compiled wheels on GitHub, and I did
 find one that worked, but it’s for an older version of TensorFlow (2.5.1), and 2.8 is out right
@@ -117,13 +113,12 @@ thousands of text files of source code. Can you imagine dealing with thirty-thou
 a folder? This codebase is like the source code to the operating system of that robot from
 Metal Gear Solid.
 
-- Sloccount is a computer program that simply counts how many lines of code there are in a
-folder full of source code. It most always returns in less than a second. I ran that program
-on the TensorFlow codebase, it took my machine at least 4 minutes. There’s over 2 million
-lines of code. For example, there’s these 2 files [tfl_ops.cc](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/compiler/mlir/lite/ir/tfl_ops.cc) and [legalize_tf.cc](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/compiler/mlir/tosa/transforms/legalize_tf.cc) that each have
-4,000 and 2300 lines of code; it took 3+ hours to compile just those 2 files.
+- `Sloccount` is a computer program that simply counts how many lines of code there are in a
+folder full of source code.  It most always returns in less than a second.  I ran that program
+on the TensorFlow codebase, and it took my machine at least 4 minutes. There’s over 2 million
+lines of code. For example, there’s these 2 files [tfl_ops.cc](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/compiler/mlir/lite/ir/tfl_ops.cc) and [legalize_tf.cc](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/compiler/mlir/tosa/transforms/legalize_tf.cc) that each have 4,000 and 2300 lines of code; it took 3+ hours to compile just those 2 files.
 
-- It turns out that there's a whole community of people that take the time and expertise to compile Tensorflow wheels and redistribute them, precisely b/c it's a common problem.  See [this](https://github.com/davidenunes/tensorflow-wheels) and [this](https://www.eggwall.com/2020/09/compiling-tensorflow-without-avx.html) for example.
+- It turns out that there's a whole community of people that take the time and expertise to compile Tensorflow wheels and redistribute them, precisely b/c it's a common problem.  See [this](https://github.com/davidenunes/tensorflow-wheels) and [this](https://www.eggwall.com/2020/09/compiling-tensorflow-without-avx.html).
 
 <!--
 ## NodeJS experience
@@ -140,7 +135,7 @@ Both of these projects make use of Docker and incorporate a running `Node` serve
 
 - I first started out with C++, and then much later learned Python.  Some say you get a different kind of engineer from the one that learns Python first and then has to learn C.  I understood the call stack, walked through things slowly with the **gdb** tool, made a game loop with it, etc.  The first compiler that I found that worked decent was Borland C++, which is still around today.  I used to lookup www.cplusplus.com **constantly**, and that web site is still up and looks the same.  C++ allows for very under-the-hood understanding of exactly how things are performed by the machine/computer, whereas Python is designed to hide these types of things.. automatic garbage collection for example (versus manually freeing memory).  Once you have a good grasp of the syntax for argument-passing (call by reference or call by value?), then you never mess it up again and you can focus.
 
-- **Olimar's Escape** is a text-based RPG game I made.  It features a game loop - of course - and is incomplete, but taught me that things can get big really quickly.  I had to start coming up with characters, and stories, and scenes, and speach, and items that need to go in the rooms, and all kinds of things.  It takes a lot to make a full video game.  The code is [here](https://github.com/mavas/Olimar-Escape).  The important thing about this though is that I was thinking entirely at a high level while programming this using only C++; in other words, I was thinking about _a whole game_, in standard C++.  No other libraries were used, so it's just using raw C++, to make a text-based RPG game; it doesn't even use the standard template library (STL).
+- **Olimar's Escape** is a text-based RPG game I made.  It features a game loop - of course - and is incomplete, but taught me that things can get big really quickly.  I had to start coming up with characters, and stories, and scenes, and speech, and items that need to go in the rooms, and all kinds of things.  It takes a lot to make a full video game.  The code is [here](https://github.com/mavas/Olimar-Escape).  The important thing about this though - in regards to my current expertise with C++ - is that I was thinking _entirely_ at a high level while programming this using only C++; in other words, I was thinking about _a whole game_, in standard C++.  No other libraries were used, so it's just using raw C++ (variables, functions, classes, reading from files, etc.), to make a text-based RPG game; it didn't even use the standard template library (STL).
 
 - I kind of got into the Boost libraries but didn't stay around for too long, it turns out.  Boost.Python was used during an internship to make C++ bindings between C++ and Python.  There were numerous other options at the time but we settled on Boost.  The project ended up not using my work and using some other language binding tool.  OpenCog uses Boost extensively and successfully, and I have had to deal with that codebase before.
 
