@@ -4,7 +4,15 @@
 
 This document is entirely made for employment purposes.
 
-Each section (except for this one) describes a technical problem that was worked on; in no particular order.
+Each section (aside from this one) describes a technical problem that was worked on; in no particular order.
+
+<!--
+## Git usage
+
+I use Git all the time.  Along with Git Flow.  I used to use SVN, and even Bazaar.  My focus is on the `main` branch, updating the `README.md` file with the latest release notes, creating `git tag`s on that branch, and then quickly throwing those `feature/miscellaneous` branches away.  I have the original Git Flow picture printed out and posted on my wall next to the computer.
+
+- https://nvie.com/posts/a-successful-git-branching-model/
+-->
 
 ## Production deployment: MeleeSearch REST API endpoint (over Tor network)
 
