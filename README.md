@@ -13,22 +13,8 @@
 
 - Tensorflow Certified
 
-- [Recent technical problems I'm working on](writings/Portfolio.md).
-
-<!--
-mtp
-coconut delivery
-go-web-server
-sirkel
-tic-tac-toe
-normalize-string
-RideCell-parking-app-api
-featherlight-challenge
-
-sutcta
-counttext
-ga
--->
+- https://mavas.pythonanywhere.com/
+- https://www.FalconPunchCheerios.com/ (currently offline)
 
 
 <!---- [Education](education.md).--->
