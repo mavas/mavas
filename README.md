@@ -1,7 +1,7 @@
 <!---
 - 👋 Hi, I’m @mavas
-- 👀 I’m currently interested in getting hired for software work.
-- 🌱 I’m currently learning to pass the official TensorFlow certification
+- 👀 I’m currently interested in..
+- 🌱 I’m currently learning..
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 --->
@@ -9,8 +9,8 @@
 
 - [This](https://github.com/mavas/hackerrank) repository has some recent **computer science problem solutions**.
 
-- Cloud Professional Certified
+- Certified Professional Google Cloud Data Engineer
 
 - Tensorflow Certified
 
-- https://mavas.pythonanywhere.com/
+- https://mavas.PythonAnywhere.com
