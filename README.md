@@ -7,7 +7,7 @@
 --->
 # 👋 Software Developer résumé
 
-- [This](https://github.com/mavas/hackerrank) repository has some recent **computer science problem solutions**.
+- Computer science problem solutions ([here](https://github.com/mavas/hackerrank)).
 
 - Certified Professional Google Cloud Data Engineer
 
