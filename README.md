@@ -11,6 +11,6 @@
 
 - Certified Professional Google Cloud Data Engineer
 
-- Tensorflow Certified
+- Tensorflow Certified (see www.tensorflow.org/certificate)
 
 - https://mavas.PythonAnywhere.com
